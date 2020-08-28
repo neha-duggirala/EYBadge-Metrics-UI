@@ -36,20 +36,18 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
+<v-content class="ats-container">
+          <router-view></router-view>
+        </v-content>
     <v-main>
-      <Home/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Home from './components/Home';
 export default {
   name: 'App',
-  components: {
-    Home,
-  },
+  
   data: () => ({
     //
   }),

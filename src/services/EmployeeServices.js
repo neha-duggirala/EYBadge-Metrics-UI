@@ -1,9 +1,9 @@
 import AxiosService from './common/AxiosService';
-import { GET_EMPLOYEES } from '../constants/EndPoints';
+import { GET_EMPLOYEES, EMPLOYEE_PATH } from '../constants/EndPoints';
 
 class EmployeeService {
     getEmployeeById(id) {
-        return AxiosService.get(GET_EMPLOYEES+"/"+id);
+        return AxiosService.get(EMPLOYEE_PATH+"/"+id);
     }
 }
 

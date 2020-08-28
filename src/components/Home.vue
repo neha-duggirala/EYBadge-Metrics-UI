@@ -1,35 +1,18 @@
 <template>
-  <v-card
-  class="mx-auto"
-    max-width="1500">
+  <v-card class="mx-auto" max-width="1500">
     <v-container fluid>
       <v-row dense>
         <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
           <v-card>
-            <v-img
-              :src="card.src"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title v-text="card.title"></v-card-title>
-            </v-img>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
+              <v-text-field v-model = "id" label="Enter your ID" filled></v-text-field>
 
-              <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
+              <v-radio-group>
+                <v-radio label="Employee" value="employee"></v-radio>
+                <v-radio label="Manager" value="manager"></v-radio>
+              </v-radio-group>
 
-              <v-btn icon>
-                <v-icon>mdi-bookmark</v-icon>
-              </v-btn>
-
-              <v-btn icon>
-                <v-icon>mdi-share-variant</v-icon>
-              </v-btn>
-            </v-card-actions>
+              <v-btn :to="{name: 'Employee', params:{id}}" x-large color="success" dark>Login</v-btn>
           </v-card>
         </v-col>
       </v-row>
@@ -43,9 +26,7 @@ export default {
 
   data: () => ({
     cards: [
-        { title: "/manager.json/0", src: 'office_icon.jpg', flex: 4 },
-        { title: 'Favorite road trips', src: 'office_icon.jpg', flex: 4 },
-        { title: 'Best airlines', src: 'office_icon.jpg', flex: 4 },
+        { title: "Home", flex: 4 }
       ]
   }),
   methods:{
