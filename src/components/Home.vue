@@ -48,5 +48,10 @@ export default {
         { title: 'Best airlines', src: 'office_icon.jpg', flex: 4 },
       ]
   }),
+  methods:{
+    mounted() {
+    this.$store.dispatch("getManager");
+  }
+  }
 };
 </script>
