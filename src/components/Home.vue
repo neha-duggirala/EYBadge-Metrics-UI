@@ -12,7 +12,7 @@
                 <v-radio label="Manager" value="manager"></v-radio>
               </v-radio-group>
 
-              <v-btn :to="{name: 'Employee', params:{id}}" x-large color="success" dark>Login</v-btn>
+              <v-btn :to="{name: 'Employee', params: {id}}" x-large color="success" dark>Login</v-btn>
           </v-card>
         </v-col>
       </v-row>
@@ -25,6 +25,7 @@ export default {
   name: "Home",
 
   data: () => ({
+    id: "Hi",
     cards: [
         { title: "Home", flex: 4 }
       ]
