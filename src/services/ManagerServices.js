@@ -1,9 +1,13 @@
 import AxiosService from './common/AxiosService';
-import { GET_MANAGER } from '../constants/EndPoints';
+import { EMPLOYEE_PATH } from '../constants/EndPoints';
 
 class ManagerService {
-    getManager() {
-        return AxiosService.get(GET_MANAGER);
+    getAllEmployees() {
+        return AxiosService.get(EMPLOYEE_PATH);
+    }
+
+    getEmployeeById(id){
+        return AxiosService.get(EMPLOYEE_PATH + "/" + id)
     }
 }
 
