@@ -7,6 +7,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
      state: {
       count: 0,
+      chartData: {
+        "testCoverage": [56, 73, 54, 64, 89, 78, 90, 75, 87, 67, 89, 91, 91],
+        "codeSmellPercent": [90, 89, 90, 45, 67, 90, 45, 67, 45, 67, 78, 89],
+        "codeQualityPercent":[67, 89, 78, 90, 89, 90, 90, 89, 90, 89, 54, 67],
+        "throughput": [6, 8, 7, 0, 9, 9, 4, 6, 7, 9, 5, 7],
+        "kloc": [300, 299, 655, 334, 455, 888, 678, 985, 234, 656, 758, 565],
+        "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]    
+    },
+        
       EmployeeObj:
         [{
           "employeeId": 1,
