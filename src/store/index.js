@@ -110,6 +110,7 @@ export default new Vuex.Store({
     actions:{
       getEmpById(context, id) {
         EmployeeService.getEmployeeById(id).then((response) => {
+          console.log(id);
           context.commit('setSelectedEmployee', response.data);
         }).catch((error) => {
           console.log(error);
