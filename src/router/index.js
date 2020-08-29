@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import Employee from '../components/Employee'
+import LineChart from '../components/LineChart'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,12 @@ Vue.use(VueRouter)
     path: '/Employee/:id',
     name: 'Employee',
     component: Employee
+  },
+
+  {
+    path: '/line',
+    name: 'monthly-sales-chart',
+    component: LineChart
   }
 
 ]

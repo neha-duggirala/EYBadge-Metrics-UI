@@ -1,26 +1,27 @@
 <template>
-  <v-card title="Employee">
-    <v-text-field label="Enter your ID" filled>{{selectedEmployee}}</v-text-field>
-    <p>{{selectedEmployee}}</p>
-    <p>{{this.$store.state.EmployeeObj}}</p>
-  </v-card>
+  <line-chart
+    :width="500"
+    :height="300"
+    :labels= "['Jan', 'Feb', 'Mar','Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct','Nov', 'Dec']"
+    :datasets="$options.datasets"
+  ></line-chart>
 </template>
 
 <script>
-export default {
-  name: "Employee",
-  data()
-  {
-      return{
-      selectedEmployee: this.$route.params.id
-      }
-  },
-  mounted(){
-          this.selectedEmployee = this.$route.params.id;
-          this.$store.dispatch("getEmpById", 1)
-  }
-};
-</script>
+import LineChart from './LineChart';
 
-<style>
-</style>
+var datasets = [
+  {
+    label: 'Test Coverage',
+    data: this.$store.state.chartData.testCoverage
+  }
+];
+
+export default {
+  name: 'Employee',
+  datasets,
+  components: {
+    LineChart,
+  }
+}
+</script>
