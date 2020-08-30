@@ -1,20 +1,20 @@
 <template>
   <div class="example">
     <apexcharts width="800" height="550" :options="chartOptions" :series="series"></apexcharts>
-    <timeline :items="items"></timeline>
+    <vue-horizontal-timeline :items="items"/>
   </div>
 </template>
 
 <script>
 import VueApexCharts from "vue-apexcharts";
-import VueHorizontalTimeline from "vue-horizontal-timeline";
 // import { VueHorizontalTimeline } from "vue-horizontal-timeline";
+
 
 export default {
   name: "Chart",
   components: {
     apexcharts: VueApexCharts,
-    timeline: VueHorizontalTimeline,
+    // timeline: vue-horizontal-timeline,
   },
   data: function () {
     return {
