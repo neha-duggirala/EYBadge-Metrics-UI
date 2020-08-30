@@ -1,35 +1,77 @@
 <template>
   <div class="example">
-    <apexcharts width="800" height="550" :options="chartOptions" :series="series"></apexcharts>
-    <vue-horizontal-timeline :items="items"/>
+    <h1>Developer KPI Metrics</h1>
+    <apexcharts width="1000" height="550" :options="chartOptions" :series="series"></apexcharts>
+        <h1>Innovation Timeline</h1>
+    <vue-horizontal-timeline min-width=200px timeline-background= '#FFFFFF' :items="items"/>
   </div>
 </template>
 
 <script>
 import VueApexCharts from "vue-apexcharts";
-// import { VueHorizontalTimeline } from "vue-horizontal-timeline";
-
 
 export default {
   name: "Chart",
   components: {
     apexcharts: VueApexCharts,
-    // timeline: vue-horizontal-timeline,
   },
   data: function () {
     return {
       items: [
       {
-        title: "1947",
+        title: "January",
         content:
-          "The Paraguayan Civil War, also known as the Barefoot Revolution and the Second Paraguayan Civil War, was a conflict in Paraguay that lasted from March to August 1947."
+          "Idea to Enhance the company: Follow a performance management tool"
       },
       {
-        title: "1954",
+        title: "Febuary",
+      },
+      {
+        title: "March",
         content:
-          "The Algerian War, was a war between France and the Algerian National Liberation Front (French: Front de Libération Nationale – FLN) from 1954 to 1962, which led to Algeria gaining its independence from France."
-      }
-    ],
+          ""
+      },
+      {
+        title: "April",
+        content:
+          ""
+      },
+      {
+        title: "May",
+        content:
+          ""
+      },
+      {
+        title: "June",
+        content:
+          ""
+      },
+      {
+        title: "July",
+        content:
+          ""
+      },
+      {
+        title: "August",
+        content:
+          "Idea to enhance the project: Use tool like Resharper"
+      },
+      {
+        title: "September",
+        content:
+          ""
+      },
+      {
+        title: "November",
+        content:
+          ""
+      },
+      {
+        title: "December",
+        content:
+          ""
+      },
+ ],
       chartOptions: {
         chart: {
           id: "basic-bar",

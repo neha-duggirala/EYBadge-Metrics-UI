@@ -5,7 +5,9 @@
         <v-btn to="/">
           <v-icon>mdi-home</v-icon>
         </v-btn>
-        <span class="mr-2">Home</span>
+        <div>
+        <v-toolbar-title>EY Employee Performance Metrics</v-toolbar-title>
+        </div>
       </div>
 
       <v-spacer></v-spacer>
