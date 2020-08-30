@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
      state: {
       count: 0,
+      badgeData: "Badge Earned: Data Visualization(Gold), Grade: 'A'",
       chartData: {
         "testCoverage": [56, 73, 54, 64, 89, 78, 90, 75, 87, 67, 89, 91, 91],
         "codeSmellPercent": [90, 89, 90, 45, 67, 90, 45, 67, 45, 67, 78, 89],
