@@ -15,8 +15,8 @@ export default {
     BarChart,
   },
     mounted() {
-      this.$store.dispatch("getEmp");
-      console.log(this.$store.state.employeesList);
+      this.$store.dispatch("getEmpById",this.$route.params.id);
+      console.log(this.$store.state.NewEmployeeObj);
     }
 };
 </script>
