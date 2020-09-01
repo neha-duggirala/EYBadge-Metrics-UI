@@ -15,11 +15,9 @@ export default {
     Chart,
     BarChart
   },
-  methods: {
     mounted() {
-      alert("He");
       this.$store.dispatch("getEmpById",1);
-    },
-  }
+      console.log("Employee",this.$store.state.NewEmployeeObj);
+    }
 }
 </script>

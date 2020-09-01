@@ -36,15 +36,15 @@ class AxiosService {
     }
 
     get(path) {
-        
+        console.log("Common Axios Service");
         return this.service
             .get(this.baseURL+path)
             .then(response => {
-                response.setHeader("Access-Control-Allow-Headers")
+                // response.setHeader("Access-Control-Allow-Headers")
                 return response;
             })
             .catch(error => {
-                console.log(this.baseURL+path);
+                console.log("ERRORRRRRRRR",this.baseURL+path);
 
                 throw error;
             });
