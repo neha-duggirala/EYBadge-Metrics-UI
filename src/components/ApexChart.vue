@@ -87,8 +87,8 @@ export default {
               x2: "August",
               fillColor: "#B3F7CA",
               label: {
-                orientation: 'vertical',
-                text: this.$store.state.badgeData
+                orientation: 'horizontal',
+                text: "Data Analytics Badge earned(Gold), Grade:'A'",
               },
             },
           ],

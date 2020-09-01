@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import Employee from '../components/Employee'
 import ApexChart from '../components/ApexChart'
+import BarChart from '../components/BarChart'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ Vue.use(VueRouter)
     path: '/apex',
     name: 'Vue Chart',
     component: ApexChart
+  },
+  {
+    path: '/bar',
+    name: "Bar Chart",
+    component: BarChart
   }
 
 ]
