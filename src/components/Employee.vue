@@ -16,7 +16,7 @@ export default {
   },
     mounted() {
       this.$store.dispatch("getEmpById",1);
-      console.log("Employee",this.$store.state.NewEmployeeObj);
+      console.log(this.$store.state.NewEmployeeObj);
     }
-}
+};
 </script>

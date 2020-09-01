@@ -16,19 +16,19 @@
         <v-list-item-title class="pl-2" @click="navigateTo(0)">Home Dash Board</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/Assets" icon depressed large>
+        <v-btn to="/Employee/1" icon depressed large>
           <v-icon>mdi-desktop-mac-dashboard</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(1)">Developer</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/Categories" icon depressed large>
+        <v-btn to="/Employee/1" icon depressed large>
           <v-icon>mdi-animation</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(2)">Team Lead</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/SubCategories" icon depressed large>
+        <v-btn to="/Employee/1" icon depressed large>
           <v-icon>mdi-animation-outline</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(3)">Project Manager</v-list-item-title>
