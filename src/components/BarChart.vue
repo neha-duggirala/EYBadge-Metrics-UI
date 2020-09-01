@@ -26,19 +26,19 @@ export default {
           height: 350,
           type: "bar",
         },
-        annotations: {
-          xaxis: [
-            {
-              x: "May",
-              x2: "August",
-              fillColor: "#FFFF15",
-              label: {
-                orientation: 'horizontal',
-                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
-              },
-            },
-          ],
-        },
+        // annotations: {
+        //   xaxis: [
+        //     {
+        //       x: "May",
+        //       x2: "August",
+        //       fillColor: "#FFFF15",
+        //       label: {
+        //         orientation: 'horizontal',
+        //         text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+        //       },
+        //     },
+        //   ],
+        // },
         plotOptions: {
           bar: {
             dataLabels: {
@@ -56,7 +56,7 @@ export default {
         },
 
         xaxis: {
-          categories: this.$store.state.chartData.months,
+          categories: this.$store.state.chartData.dates,
           position: "top",
           axisBorder: {
             show: false,
@@ -102,7 +102,7 @@ export default {
         },
       },
     };
-  },
+  }
 };
 </script>
 

@@ -80,21 +80,21 @@ export default {
               type:'solid',
             },
 
-        annotations: {
-          xaxis: [
-            {
-              x: "May",
-              x2: "August",
-              fillColor: "#B3F7CA",
-              label: {
-                orientation: 'horizontal',
-                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
-              },
-            },
-          ],
-        },
+        // annotations: {
+        //   xaxis: [
+        //     {
+        //       x: "May",
+        //       x2: "August",
+        //       fillColor: "#B3F7CA",
+        //       label: {
+        //         orientation: 'horizontal',
+        //         text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+        //       },
+        //     },
+        //   ],
+        // },
         xaxis: {
-          categories: this.$store.state.chartData.months,
+          categories: this.$store.state.chartData.dates,
         },
       },
       series: [
