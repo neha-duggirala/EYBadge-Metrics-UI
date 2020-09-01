@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import EmployeeService from '../services/EmployeeServices';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     count: 0,
+    mini: true,
     chartData: {
       "testCoverage": [56, 58, 60, 64, 55, 78, 80, 75, 87, 77, 89, 91, 91],
       "codeSmellPercent": [60, 54, 50, 45, 67, 90, 85, 87, 75, 87, 88, 89],
@@ -23,16 +23,9 @@ export default new Vuex.Store({
     ]
   },
     actions: {
-      getEmpById(context, id) {
-        console.log(id);
-        EmployeeService.getEmployeeById(id).then((response) => {
-          
-          context.commit('setSelectedEmployee', response.data);
-        }).catch((error) => {
-          console.log(error);
-        });
-      }
-
+      navExtendCollapse: (context) => {
+        context.commit('navExtendCollapse')
+    }
     },
     mutations: {
       setSelectedEmployee(state, data) {
@@ -40,6 +33,9 @@ export default new Vuex.Store({
       },
       increment(state) {
         state.count++
-      }
+      },
+      navExtendCollapse(state) {
+        state.mini = !(state.mini)
+    }
     }
   });

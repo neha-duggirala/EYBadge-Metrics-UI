@@ -10,12 +10,6 @@ export default {
   name: 'Employee',
   components: {
     Chart
-  },
-  methods: {
-    mounted() {
-      alert("He");
-      this.$store.dispatch("getEmpById",1);
-    },
   }
 }
 </script>
