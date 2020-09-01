@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div>
     <h1>Developer KPI Metrics</h1>
     <apexcharts width="1000" height="550" :options="chartOptions" :series="series"></apexcharts>
         <h1>Innovation Timeline</h1>
@@ -87,8 +87,8 @@ export default {
               x2: "August",
               fillColor: "#B3F7CA",
               label: {
-                orientation: 'vertical',
-                text: this.$store.state.badgeData
+                orientation: 'horizontal',
+                text: "Data Analytics Badge earned(Gold), Grade:'A'",
               },
             },
           ],

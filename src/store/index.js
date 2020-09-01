@@ -13,7 +13,7 @@ export default new Vuex.Store({
       "codeQualityPercent": [67, 29, 68, 70, 89, 90, 90, 89, 90, 89, 74, 67],
       "throughput": [6, 8, 7, 0, 9, 9, 4, 6, 7, 9, 5, 7],
       "kloc": [300, 299, 655, 334, 455, 888, 678, 985, 234, 656, 758, 565],
-      "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     },
 
     EmployeeObj: [
