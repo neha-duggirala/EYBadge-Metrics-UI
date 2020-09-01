@@ -1,5 +1,5 @@
 <template>
-  <div class="example">
+  <div>
     <h1>Developer KPI Metrics</h1>
     <apexcharts width="1000" height="550" :options="chartOptions" :series="series"></apexcharts>
         <h1>Innovation Timeline</h1>

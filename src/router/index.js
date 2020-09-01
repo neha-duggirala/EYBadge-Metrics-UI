@@ -26,7 +26,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/bar',
-    name: "Bar Chart",
+    name: 'Bar Chart',
     component: BarChart
   }
 

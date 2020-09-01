@@ -12,7 +12,11 @@ export default {
   name: "Employee",
   components: {
     Chart,
-    BarChart,
+    BarChart
   },
-};
+    mounted() {
+      this.$store.dispatch("getEmpById",1);
+      console.log("Employee",this.$store.state.NewEmployeeObj);
+    }
+}
 </script>
