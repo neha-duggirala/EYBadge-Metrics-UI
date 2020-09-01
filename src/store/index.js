@@ -25,10 +25,24 @@ export default new Vuex.Store({
       { "employeeId": 2, "employeeName": "Sindhu", "teamName": "EY Team1", "developerKpiDto": [{ "date": "2020-08-24T01:20:42.22", "testCoverage": 100, "codeSmellPercent": 100, "codeQualityPercent": 65, "kloc": 4000, "throughput": 97 }, { "date": "2019-02-20T00:00:00", "testCoverage": 50, "codeSmellPercent": 78, "codeQualityPercent": 68, "kloc": 1200, "throughput": 74 }, { "date": "2020-08-10T00:00:00", "testCoverage": 97, "codeSmellPercent": 98, "codeQualityPercent": 95, "kloc": 1300, "throughput": 98 }, { "date": "2019-02-06T00:00:00", "testCoverage": 45, "codeSmellPercent": 65, "codeQualityPercent": 32, "kloc": 450, "throughput": 49 }], "outOfBoxDto": [{ "date": "2020-08-24T01:02:21.903", "ideasToEnhanceTheCompany": null, "ideasToEnhanceTheProject": "Use Story boards and graphs to the fullest" }, { "date": "2019-06-20T00:00:00", "ideasToEnhanceTheCompany": "Conduct more fun activities for increasing employee interaction", "ideasToEnhanceTheProject": "Usage of Static analysis tools for more productive code" }] },
       { "employeeId": 3, "employeeName": "Ankitha", "teamName": "EY Team2", "developerKpiDto": null, "outOfBoxDto": [{ "date": "2020-05-15T00:00:00", "ideasToEnhanceTheCompany": null, "ideasToEnhanceTheProject": "Perform more vulnerability tests" }] }
     ],
-    NewEmployeeObj:{}
+    NewEmployeeObj:{
+      developerKpiDto:[],
+      employeeId:"",
+      employeeName:"",
+      outOfBoxDto:[],
+      teamName:""
+    },
+    employeesList:[]
   },
     actions: {
       // AXIOS call
+      getEmp(context) {
+        EmployeeService.getCategories().then((response) => {
+          context.commit('setEmployees', response.data);
+        }).catch((error) => {
+          console.log(error);
+        });
+      },
         getEmpById(context, id) {
           EmployeeService.getEmployeeById(id).then((response) => {
             
@@ -44,8 +58,13 @@ export default new Vuex.Store({
     
     },
     mutations: {
+      setEmployees(state, data) {
+        state.employeesList = data;
+        // data.forEach(element => {
+        //   state.categoryNames.push(element.Name);
+        // });
+      },
       setSelectedEmployee(state, data) {
-
         state.EmployeeObj = data;
         console.log("Store",state.EmployeeObj);
 
