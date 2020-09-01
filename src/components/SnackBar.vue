@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-snackbar v-model="$store.state.snackbar.display" bottom right :color="$store.state.snackbar.color">{{$store.state.snackbar.message}}</v-snackbar>
+    <v-snackbar v-model="$store.state.display" bottom right :color="$store.state.color">{{$store.state.message}}</v-snackbar>
   </div>
 </template>
 

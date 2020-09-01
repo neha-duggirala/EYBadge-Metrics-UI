@@ -14,5 +14,9 @@ export default {
     Chart,
     BarChart,
   },
+    mounted() {
+      this.$store.dispatch("getEmpById",1);
+      console.log(this.$store.state.NewEmployeeObj);
+    }
 };
 </script>
