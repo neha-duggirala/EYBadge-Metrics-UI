@@ -34,8 +34,7 @@ export default {
               fillColor: "#FFFF15",
               label: {
                 orientation: 'horizontal',
-                text: "Data Analytics Badge earned(Gold), Grade:'A'",
-
+                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
               },
             },
           ],
