@@ -24,7 +24,7 @@ export default new Vuex.Store({
   },
     actions: {
       getEmpById(context, id) {
-        console.log(id);
+        console.log("Store",id);
         EmployeeService.getEmployeeById(id).then((response) => {
           
           context.commit('setSelectedEmployee', response.data);

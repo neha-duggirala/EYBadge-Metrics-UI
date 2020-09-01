@@ -36,7 +36,7 @@ class AxiosService {
     }
 
     get(path) {
-        
+        console.log("Common Axios Service");
         return this.service
             .get(this.baseURL+path)
             .then(response => {
@@ -44,7 +44,7 @@ class AxiosService {
                 return response;
             })
             .catch(error => {
-                console.log(this.baseURL+path);
+                console.log("ERRORRRRRRRR",this.baseURL+path);
 
                 throw error;
             });
