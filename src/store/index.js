@@ -25,10 +25,9 @@ export default new Vuex.Store({
   },
     actions: {
       getEmpById(context, id) {
-        console.log("Store",id);
         EmployeeService.getEmployeeById(id).then((response) => {
-          
           context.commit('setSelectedEmployee', response.data);
+
         }).catch((error) => {
           console.log(error);
         });
@@ -37,7 +36,9 @@ export default new Vuex.Store({
     },
     mutations: {
       setSelectedEmployee(state, data) {
+        console.log("Store",data);
         state.NewEmployeeObj = data;
+
       },
       increment(state) {
         state.count++
