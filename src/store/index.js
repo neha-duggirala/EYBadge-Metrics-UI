@@ -36,7 +36,7 @@ export default new Vuex.Store({
     actions: {
       // AXIOS call
       getEmp(context) {
-        EmployeeService.getCategories().then((response) => {
+        EmployeeService.getEmployees().then((response) => {
           context.commit('setEmployees', response.data);
         }).catch((error) => {
           console.log(error);
@@ -59,6 +59,7 @@ export default new Vuex.Store({
     mutations: {
       setEmployees(state, data) {
         state.employeesList = data;
+        console.log(data)
         // data.forEach(element => {
         //   state.categoryNames.push(element.Name);
         // });
