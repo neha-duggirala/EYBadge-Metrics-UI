@@ -22,12 +22,12 @@ export default {
     Chart,
     BarChart
   },
+  mounted() {
+      this.$store.dispatch("getEmpChartDataById",this.$route.params.id);
+    },
   methods: {
     loadData() {
-      this.$store.dispatch("getEmpChartDataById");}
-    },
-    beforeMount() {
-      this.$store.dispatch("getEmpChartDataById",this.$route.params.id);
+      this.$store.dispatch("getEmpChartDataById"),this.$$route.params.id;}
     },
 };
 </script>
