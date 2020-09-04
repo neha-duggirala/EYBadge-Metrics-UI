@@ -4,6 +4,7 @@ import Home from '../components/Home'
 import Employee from '../components/Employee'
 import ApexChart from '../components/ApexChart'
 import BarChart from '../components/BarChart'
+import ColumnChart from '../components/ColumnChart'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ Vue.use(VueRouter)
     path: '/bar',
     name: 'Bar Chart',
     component: BarChart
+  },
+  {
+    path: '/manager',
+    name: 'Colulmn Chart',
+    component: ColumnChart
   }
 
 ]
