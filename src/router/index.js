@@ -4,7 +4,8 @@ import Home from '../components/Home'
 import Employee from '../components/Employee'
 import ApexChart from '../components/ApexChart'
 import BarChart from '../components/BarChart'
-
+import EmployeeCards from '../components/EmployeeCards'
+import TeamCards from '../components/TeamCards'
 Vue.use(VueRouter)
 
   const routes = [
@@ -28,6 +29,16 @@ Vue.use(VueRouter)
     path: '/bar',
     name: 'Bar Chart',
     component: BarChart
+  },
+  {
+    path: '/EmployeeCards',
+    name: 'EmployeeCards',
+    component: EmployeeCards
+  },
+  {
+    path: '/TeamCards',
+    name: 'TeamCards',
+    component: TeamCards
   }
 
 ]
