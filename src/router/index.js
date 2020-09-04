@@ -5,7 +5,6 @@ import Employee from '../components/Employee'
 import ApexChart from '../components/ApexChart'
 import BarChart from '../components/BarChart'
 import ColumnChart from '../components/ColumnChart'
-
 import EmployeeCards from '../components/EmployeeCards'
 import TeamCards from '../components/TeamCards'
 Vue.use(VueRouter)
@@ -36,6 +35,8 @@ Vue.use(VueRouter)
     path: '/manager',
     name: 'Colulmn Chart',
     component: ColumnChart
+  },
+  {
     path: '/EmployeeCards',
     name: 'EmployeeCards',
     component: EmployeeCards
@@ -44,8 +45,7 @@ Vue.use(VueRouter)
     path: '/TeamCards',
     name: 'TeamCards',
     component: TeamCards
-  }
-
+  },
 ]
 
 const router = new VueRouter({
