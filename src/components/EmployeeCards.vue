@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      src: "http://localhost:8081/office_icon.jpg",
+      src: "http://localhost:8080/office_icon.jpg",
       flex: 4,
     };
   }

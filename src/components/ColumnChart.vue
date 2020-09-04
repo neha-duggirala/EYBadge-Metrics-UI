@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <apexcharts type="bar" height="350" :options="chartOptions1" :series="series1"></apexcharts>
+      <apexcharts type="line" height="350" :options="chartOptions1" :series="series1"></apexcharts>
     </div>
     <hr />
     <table>
@@ -24,19 +24,27 @@
         </td>
       </tr>
     </table>
+    <dataTable
+      :items="BadgeData"
+    >
+    </dataTable>
   </div>
 </template>
 
 <script>
 import VueApexCharts from "vue-apexcharts";
+import VueDataTable from "vue-data-table";
 
 export default {
   name: "ColumnChart",
   components: {
     apexcharts: VueApexCharts,
+    dataTable: VueDataTable,
   },
   data: function () {
     return {
+      Headers: ["Employee Id", "Badge Domain", "Badge Sub-Domain", "Badge Type", "Completed On"],
+    BadgeData: [["GPN 273", "Analytics", "Data visualization", "Silver", "21-01-2020"],["GPN 273", "Analytics", "Data visualization", "Silver", "21-01-2020"],["GPN 273", "Analytics", "Data visualization", "Silver", "21-01-2020"],["GPN 273", "Analytics", "Data visualization", "Silver", "21-01-2020"]],
       myStyle: {
         backgroundColor: "#000000",
       },
@@ -49,12 +57,19 @@ export default {
       series1: [
         {
           name: "Commited",
+          type: "column",
           data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
         },
         {
           name: "Completed",
+          type: "column",
           data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
         },
+        // {
+        //   name: "Hey",
+        //   type: "line",
+        //   data: [86, 56, 51, 67, 86, 70, 41, 14, 65],
+        // },
       ],
       chartOptions3: {
         chart: {
@@ -123,7 +138,7 @@ export default {
           text: "Velocity Chart",
         },
         chart: {
-          type: "bar",
+          type: "line",
           height: 350,
         },
         legend: {

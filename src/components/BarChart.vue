@@ -26,19 +26,19 @@ export default {
           height: 350,
           type: "bar",
         },
-        // annotations: {
-        //   xaxis: [
-        //     {
-        //       x: "May",
-        //       x2: "August",
-        //       fillColor: "#FFFF15",
-        //       label: {
-        //         orientation: 'horizontal',
-        //         text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
-        //       },
-        //     },
-        //   ],
-        // },
+        annotations: {
+          xaxis: [
+            {
+              x: "2020-04-20",
+              x2: "2019-12-10",
+              fillColor: "#FFFF15",
+              label: {
+                orientation: 'horizontal',
+                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+              },
+            },
+          ],
+        },
         plotOptions: {
           bar: {
             dataLabels: {
