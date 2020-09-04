@@ -34,7 +34,12 @@ export default {
 
   data: () => ({
     sideBarExpanded: false
-  })
+  }),
+  mounted() {
+      this.$store.dispatch("getEmp");
+      this.$store.dispatch("getTeamDetails");
+    }
+
 };
 </script>
 <style lang="scss">

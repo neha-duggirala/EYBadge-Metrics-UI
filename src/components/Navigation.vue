@@ -16,16 +16,16 @@
         <v-list-item-title class="pl-2" @click="navigateTo(0)">Home Dash Board</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/Employee/1" icon depressed large>
+        <v-btn to="/EmployeeCards" icon depressed large>
           <v-icon>mdi-desktop-mac-dashboard</v-icon>
         </v-btn>
-        <v-list-item-title class="pl-2" @click="navigateTo(1)">Developer</v-list-item-title>
+        <v-list-item-title class="pl-2" @click="navigateTo(1)">All Employees</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/Employee/1" icon depressed large>
+        <v-btn to="/TeamCards" icon depressed large>
           <v-icon>mdi-animation</v-icon>
         </v-btn>
-        <v-list-item-title class="pl-2" @click="navigateTo(2)">Team Lead</v-list-item-title>
+        <v-list-item-title class="pl-2" @click="navigateTo(2)">Teams</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/Employee/1" icon depressed large>
@@ -58,8 +58,8 @@ export default {
     },
     navigateTo(value) {
       if (value == 0) this.$router.push("/");
-      else if (value == 1) this.$router.push("/Employee/1");
-      else if (value == 2) this.$router.push("/Employee/1");
+      else if (value == 1) this.$router.push("/EmployeeCards");
+      else if (value == 2) this.$router.push("TeamCards");
       else if (value == 3) this.$router.push("/Employee/1");
     }
   }

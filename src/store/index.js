@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import EmployeeService from '../services/EmployeeServices';
+import TeamDetailService from '../services/TeamDetailServices';
 
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -38,7 +39,8 @@ export default new Vuex.Store({
       outOfBoxDto: [],
       teamName: ""
     },
-    employeesList: []
+    employeesList: [],
+    TeamsList:[]
   },
   actions: {
     // AXIOS call
@@ -56,16 +58,18 @@ export default new Vuex.Store({
         console.log(error);
       });
     },
-    getEmpChartDataById(context,id) {
-      EmployeeService.getEmployeeById(id).then((response) => {
-        context.commit('setEmpChartData', response.data);
+    getEmpChartDataById(context) {
+        context.commit('setEmpChartData');
+    },
+    getTeamDetails(context) {
+      TeamDetailService.getTeamDetails().then((response) => {
+        context.commit('setTeamDetails', response.data);
       }).catch((error) => {
         console.log(error);
       });
-      // context.commit('setEmpChartData',context)
     },
-        //Nav bar
-      navExtendCollapse: (context) => {
+    //Nav bar
+    navExtendCollapse: (context) => {
       context.commit('navExtendCollapse')
     },
 
@@ -73,6 +77,7 @@ export default new Vuex.Store({
   mutations: {
     setEmployees(state, data) {
       state.employeesList = data;
+      // console.log(state.employeesList);
       // console.log(data)
       // data.forEach(element => {
       //   state.categoryNames.push(element.Name);
@@ -80,19 +85,22 @@ export default new Vuex.Store({
     },
     setSelectedEmployee(state, data) {
       state.NewEmployeeObj = data;
-
-      console.log("Store", state.NewEmployeeObj);
+      console.log("Store new empoyee object", state.NewEmployeeObj);
     },
-    setEmpChartData(state, data){
-      state.NewEmployeeObj = data;
-      state.NewEmployeeObj.developerKpiDto.forEach(function(key){
-      state.chartData.testCoverage.push(key.testCoverage);
-      state.chartData.codeSmellPercent.push(key.codeSmellPercent);
-      state.chartData.codeQualityPercent.push(key.codeQualityPercent);
-      state.chartData.throughput.push(key.throughput);
-      state.chartData.kloc.push(key.kloc);
-      state.chartData.dates.push(key.date.substring(0 , 10));
-        })
+    setTeamDetails(state, data) {
+      state.TeamsList = data;
+      console.log("Store Team list", state.TeamsList);
+    },
+    setEmpChartData(state) {
+      
+      state.NewEmployeeObj.developerKpiDto.forEach(function (key) {
+        state.chartData.testCoverage.push(key.testCoverage);
+        state.chartData.codeSmellPercent.push(key.codeSmellPercent);
+        state.chartData.codeQualityPercent.push(key.codeQualityPercent);
+        state.chartData.throughput.push(key.throughput);
+        state.chartData.kloc.push(key.kloc);
+        state.chartData.dates.push(key.date.substring(0, 10));
+      })
     },
     increment(state) {
       state.count++

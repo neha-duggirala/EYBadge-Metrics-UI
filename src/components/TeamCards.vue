@@ -1,0 +1,51 @@
+<template>
+  <div id="cards">
+    <v-container fluid>
+      <v-row dense>
+        <v-col
+          v-for="card in $store.state.TeamsList"
+          :key="card.teamId"
+          :cols="flex"
+          class="d-flex"
+        >
+          <v-card class="d-flex flex-column">
+            <v-img
+              :src="src"
+              class="black--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              width="400"
+            ></v-img>
+            <v-card-text v-text="card.teamName"></v-card-text>
+            <v-spacer></v-spacer>
+            <v-card-actions>
+              <v-btn icon to="/" >
+                <v-icon>mdi-home</v-icon>
+              </v-btn>
+
+              
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+<script>
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState({
+      employeesList: "TeamsList",
+    }),
+  },
+  data() {
+    return {
+      src: "http://localhost:8081/team_icon.png",
+      flex: 4,
+    };
+  }
+};
+</script>
+
+<style>
+</style>

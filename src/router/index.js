@@ -6,6 +6,8 @@ import ApexChart from '../components/ApexChart'
 import BarChart from '../components/BarChart'
 import ColumnChart from '../components/ColumnChart'
 
+import EmployeeCards from '../components/EmployeeCards'
+import TeamCards from '../components/TeamCards'
 Vue.use(VueRouter)
 
   const routes = [
@@ -34,6 +36,14 @@ Vue.use(VueRouter)
     path: '/manager',
     name: 'Colulmn Chart',
     component: ColumnChart
+    path: '/EmployeeCards',
+    name: 'EmployeeCards',
+    component: EmployeeCards
+  },
+  {
+    path: '/TeamCards',
+    name: 'TeamCards',
+    component: TeamCards
   }
 
 ]
