@@ -37,6 +37,7 @@ export default {
   }),
   mounted() {
       this.$store.dispatch("getEmp");
+      this.$store.dispatch("getTeamDetails");
     }
 
 };

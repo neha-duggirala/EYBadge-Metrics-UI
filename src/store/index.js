@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import EmployeeService from '../services/EmployeeServices';
+import TeamDetailService from '../services/TeamDetailServices';
 
 Vue.use(Vuex);
 export default new Vuex.Store({
@@ -58,8 +59,14 @@ export default new Vuex.Store({
       });
     },
     getEmpChartDataById(context) {
-
         context.commit('setEmpChartData');
+    },
+    getTeamDetails(context) {
+      TeamDetailService.getTeamDetails().then((response) => {
+        context.commit('setTeamDetails', response.data);
+      }).catch((error) => {
+        console.log(error);
+      });
     },
     //Nav bar
     navExtendCollapse: (context) => {
@@ -78,8 +85,11 @@ export default new Vuex.Store({
     },
     setSelectedEmployee(state, data) {
       state.NewEmployeeObj = data;
-
-      console.log("Store", state.NewEmployeeObj);
+      console.log("Store new empoyee object", state.NewEmployeeObj);
+    },
+    setTeamDetails(state, data) {
+      state.TeamsList = data;
+      console.log("Store Team list", state.TeamsList);
     },
     setEmpChartData(state) {
       
