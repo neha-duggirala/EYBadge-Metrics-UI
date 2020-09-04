@@ -3,9 +3,27 @@
     <div>
       <apexcharts type="bar" height="350" :options="chartOptions1" :series="series1"></apexcharts>
     </div>
-    <div>
-      <apexcharts type="pie" width="500" :options="chartOptions2" :series="series2"></apexcharts>
-    </div>
+    <hr />
+    <table>
+      <tr>
+        <td>
+          <div>
+            <apexcharts type="pie" width="500" :options="chartOptions2" :series="series2"></apexcharts>
+          </div>
+        </td>
+        <td>
+          <div>
+            <apexcharts
+              type="line"
+              width="700"
+              height="400"
+              :options="chartOptions3"
+              :series="series3"
+            ></apexcharts>
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -19,9 +37,14 @@ export default {
   },
   data: function () {
     return {
-        myStyle:{
-            backgroundColor:"#000000" 
-            },
+      myStyle: {
+        backgroundColor: "#000000",
+      },
+      series3: [
+        {
+          data: [53, 51, 43, 43, 43, 29, 17, 10, 5, 3],
+        },
+      ],
       series2: [12, 7, 10, 9, 10, 5],
       series1: [
         {
@@ -33,6 +56,29 @@ export default {
           data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
         },
       ],
+      chartOptions3: {
+        chart: {
+          type: "line",
+          height: 350,
+        },
+        stroke: {
+          curve: "stepline",
+          colors: "#000000",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        title: {
+          text: "Q3.3 Burndown Chart - Story Points",
+          align: "left",
+        },
+        markers: {
+          colors: "#FFFF00",
+          hover: {
+            sizeOffset: 4,
+          },
+        },
+      },
       chartOptions2: {
         chart: {
           width: "25%",
@@ -60,7 +106,7 @@ export default {
           },
         },
         title: {
-          text: "Story points covered in recent sprint",
+          text: "Story points covered in Q3.3",
         },
         dataLabels: {
           formatter(val, opts) {
@@ -73,6 +119,9 @@ export default {
         },
       },
       chartOptions1: {
+        title: {
+          text: "Velocity Chart",
+        },
         chart: {
           type: "bar",
           height: 350,
@@ -80,7 +129,7 @@ export default {
         legend: {
           show: true,
           markers: {
-            fillColors: ["#000000", "#FFFF4d"],
+            fillColors: ["#323232", "#FFFF4d"],
           },
         },
         plotOptions: {
@@ -118,7 +167,7 @@ export default {
         },
         fill: {
           opacity: 1,
-          colors: ["#000000", "#FFFF4d"],
+          colors: ["#323232", "#FFFF4d"],
         },
         tooltip: {
           y: {
