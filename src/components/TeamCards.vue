@@ -21,6 +21,9 @@
               <v-btn icon to="/" >
                 <v-icon>mdi-home</v-icon>
               </v-btn>
+              <v-btn icon to="/Manager" >
+                <v-icon>mdi-chart-areaspline</v-icon>
+              </v-btn>  
 
               
             </v-card-actions>
@@ -40,7 +43,7 @@ export default {
   },
   data() {
     return {
-      src: "http://localhost:8081/team_icon.png",
+      src: "http://localhost:8080/team_icon.png",
       flex: 4,
     };
   }

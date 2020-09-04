@@ -1,6 +1,11 @@
 <template>
   <div>
-    <apexcharts type="bar" height="350" :options="chartOptions" :series="series"></apexcharts>
+    <div>
+      <apexcharts type="bar" height="350" :options="chartOptions1" :series="series1"></apexcharts>
+    </div>
+    <div>
+      <apexcharts type="pie" width="500" :options="chartOptions2" :series="series2"></apexcharts>
+    </div>
   </div>
 </template>
 
@@ -14,7 +19,11 @@ export default {
   },
   data: function () {
     return {
-      series: [
+        myStyle:{
+            backgroundColor:"#000000" 
+            },
+      series2: [12, 7, 10, 9, 10, 5],
+      series1: [
         {
           name: "Commited",
           data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
@@ -24,16 +33,55 @@ export default {
           data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
         },
       ],
-      chartOptions: {
+      chartOptions2: {
+        chart: {
+          width: "25%",
+          type: "pie",
+        },
+        labels: [
+          "Neha (Dev1)",
+          "Sindhu (Dev2)",
+          "Developer 3",
+          "Developer 4",
+          "Developer 5",
+          "Ankitha - QA",
+        ],
+        theme: {
+          monochrome: {
+            color: "#000000",
+            enabled: true,
+          },
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              offset: -5,
+            },
+          },
+        },
+        title: {
+          text: "Story points covered in recent sprint",
+        },
+        dataLabels: {
+          formatter(val, opts) {
+            const name = opts.w.globals.labels[opts.seriesIndex];
+            return [name, val.toFixed(1) + "%"];
+          },
+        },
+        legend: {
+          show: false,
+        },
+      },
+      chartOptions1: {
         chart: {
           type: "bar",
           height: 350,
         },
         legend: {
-      show: true,
-      markers: {
-          fillColors: ['#afaf00', '#FFFF4d'],
-      },
+          show: true,
+          markers: {
+            fillColors: ["#000000", "#FFFF4d"],
+          },
         },
         plotOptions: {
           bar: {
@@ -52,15 +100,15 @@ export default {
         },
         xaxis: {
           categories: [
-            "Q",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
+            "Q2.3",
+            "Q2.4",
+            "Q2.5",
+            "Q2.6",
+            "Q2.7",
+            "Q2.8",
+            "Q3.1",
+            "Q3.2",
+            "Q3.3",
           ],
         },
         yaxis: {
@@ -70,7 +118,7 @@ export default {
         },
         fill: {
           opacity: 1,
-          colors: ['#afaf00', '#FFFF4d']
+          colors: ["#000000", "#FFFF4d"],
         },
         tooltip: {
           y: {

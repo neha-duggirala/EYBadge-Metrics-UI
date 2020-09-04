@@ -32,7 +32,7 @@ Vue.use(VueRouter)
     component: BarChart
   },
   {
-    path: '/manager',
+    path: '/Manager',
     name: 'Colulmn Chart',
     component: ColumnChart
   },
