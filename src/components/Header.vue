@@ -5,9 +5,9 @@
       src="http://localhost:8080/ey-logo.jpg"
       max-height="70"
       max-width="50"
-      
+      to="/"
     ></v-img>
-    <v-toolbar-title class="header-title" >EY Badge Metrics</v-toolbar-title>
+    <v-toolbar-title class="header-title " >EY Badge Metrics</v-toolbar-title>
   </v-app-bar>
 </template>
 
@@ -22,9 +22,10 @@ export default {
   z-index: 9 !important ;
   height: 64px !important;
   .header-title {
-    color: white;
+    color: #FFFF00;
     margin-left: 3%;
     font-size: 20pt;
+    font-style: bold;
   }
 }
 </style>

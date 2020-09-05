@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../components/Home'
 import Employee from '../components/Employee'
 import ApexChart from '../components/ApexChart'
 import BarChart from '../components/BarChart'
@@ -10,11 +9,7 @@ import TeamCards from '../components/TeamCards'
 Vue.use(VueRouter)
 
   const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+  
 
   {
     path: '/Employee/:id',
