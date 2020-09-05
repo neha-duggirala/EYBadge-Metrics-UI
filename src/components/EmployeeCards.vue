@@ -51,8 +51,4 @@ export default {
 </script>
 
 <style>
-.v-card__title {
-
-  color: #FFFF00;
-}
 </style>

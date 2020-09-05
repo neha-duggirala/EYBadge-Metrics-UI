@@ -63,55 +63,59 @@ export default {
           content: "",
         },
       ],
-      chartOptions: {
-        chart: {
-          id: "basic-bar",
-        },
-        fill: {
-          type: "solid",
-        },
-        xaxis: {
-          categories: this.$store.state.chartData.dates,
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          crosshairs: {
-            fill: {
-              type: "gradient",
-              gradient: {
-                colorFrom: "#D8E3F0",
-                colorTo: "#BED1E6",
-                stops: [0, 100],
-                opacityFrom: 0.4,
-                opacityTo: 0.5,
-              },
-            },
-          },
-          tooltip: {
-            enabled: true,
-          },
-        },
-
-        annotations: {
-          xaxis: [
-            {
-              x: "2020-04-20",
-              x2: "2019-12-10",
-              fillColor: "#B3F7CA",
-              label: {
-                orientation: "horizontal",
-                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
-              },
-            },
-          ],
-        },
-      },
     };
   },
   computed: {
+    chartOptions: {
+      get() {
+        return {
+          chart: {
+            id: "basic-bar",
+          },
+          fill: {
+            type: "solid",
+          },
+          xaxis: {
+            categories: this.$store.state.chartData.dates,
+            axisBorder: {
+              show: false,
+            },
+            axisTicks: {
+              show: false,
+            },
+            crosshairs: {
+              fill: {
+                type: "gradient",
+                gradient: {
+                  colorFrom: "#D8E3F0",
+                  colorTo: "#BED1E6",
+                  stops: [0, 100],
+                  opacityFrom: 0.4,
+                  opacityTo: 0.5,
+                },
+              },
+            },
+            tooltip: {
+              enabled: true,
+            },
+          },
+
+          annotations: {
+            xaxis: [
+              {
+                x: "2020-04-20",
+                x2: "2019-12-10",
+                fillColor: "#B3F7CA",
+                label: {
+                  orientation: "horizontal",
+                  text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+                },
+              },
+            ],
+          },
+        };
+      },
+    },
     series2: {
       get() {
         return [

@@ -11,25 +11,25 @@
     <v-list>
       <v-list-item>
         <v-btn to="/" icon depressed large>
-          <v-icon color="#323232">mdi-chart-pie</v-icon>
+          <v-icon color="#323232">mdi-account</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(0)">Home Dash Board</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/EmployeeCards" icon depressed large>
-          <v-icon color="#323232">mdi-desktop-mac-dashboard</v-icon>
+          <v-icon color="#323232">mdi-account-multiple</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(1)">All Employees</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/TeamCards" icon depressed large>
-          <v-icon color="#323232">mdi-animation</v-icon>
+          <v-icon color="#323232">mdi-account-network</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(2)">Teams</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/Employee/1" icon depressed large>
-          <v-icon color="#323232">mdi-animation-outline</v-icon>
+          <v-icon color="#323232">mdi-chart-areaspline</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(3)">Project Manager</v-list-item-title>
       </v-list-item>

@@ -24,6 +24,20 @@
         </td>
       </tr>
     </table>
+    <v-card-title>
+      <v-container class="ml-0 mr-0 pt-0" fluid>
+        <h3 row>Team Badge Details</h3>
+        <v-layout row>
+          <v-text-field
+            v-model="search"
+            append-icon="mdi-magnify"
+            label="Search"
+            single-line
+            hide-details
+          ></v-text-field>
+          </v-layout>
+      </v-container>
+    </v-card-title>
     <v-data-table :items="BadgeData" :headers="Headers" :search="search"></v-data-table>
   </div>
 </template>
@@ -49,10 +63,13 @@ export default {
         { text: "Badge Type", value: "Type" },
         { text: "Grade Obtained", value: "grade" },
         { text: "Number of External Courses taken", value: "externalCourse" },
-        { text: "Breakout sessions given, Knowledge transfer and mentoring", value: "breakoutSessions" },
+        {
+          text: "Breakout sessions given, Knowledge transfer and mentoring",
+          value: "breakoutSessions",
+        },
         { text: "Retook the Badge", value: "retook" },
         { text: "Comments", value: "externalCourseComments" },
-        
+
         { text: "Started On", value: "startTime", sortable: false },
         { text: "Completed On", value: "endTime", sortable: false },
       ],
@@ -61,25 +78,26 @@ export default {
           date: "2020-08-23T23:42:15.61",
           employeeId: 1,
           badgeId: 101,
-          Domain:"EY Technology",
-          SubDomain:".Net Web API",
-          Type:"Bronze",
+          Domain: "EY Technology",
+          SubDomain: ".Net Web API",
+          Type: "Bronze",
           grade: 90,
           retook: false,
           startTime: "2019-12-20T00:00:00",
           endTime: "2020-03-20T00:00:00",
           breakoutSessions: 2,
           externalCourse: 1,
-          externalCourseComments: "Took the course from Coursera and built a sample POC",
+          externalCourseComments:
+            "Took the course from Coursera and built a sample POC",
           badge: null,
         },
         {
           date: "2020-08-23T23:44:32.347",
           employeeId: 2,
           badgeId: 121,
-          Domain:"EY CyberSecurity",
-          SubDomain:"Vulnerability testing",
-          Type:"Bronze",
+          Domain: "EY CyberSecurity",
+          SubDomain: "Vulnerability testing",
+          Type: "Bronze",
           grade: 65,
           retook: false,
           startTime: "2019-05-20T00:00:00",
@@ -93,9 +111,9 @@ export default {
           date: "2020-08-24T00:00:04.65",
           employeeId: 1,
           badgeId: 121,
-          Domain:"EY CyberSecurity",
-          SubDomain:"CyberSecurity",
-          Type:"Gold",
+          Domain: "EY CyberSecurity",
+          SubDomain: "CyberSecurity",
+          Type: "Gold",
           grade: 68,
           retook: false,
           startTime: "2020-02-20T00:00:00",
@@ -196,7 +214,6 @@ export default {
       },
       chartOptions1: {
         annotations: {
-          
           points: [
             {
               x: "Q2.6",
@@ -306,4 +323,6 @@ export default {
 </script>
 
 <style>
-</style>
+.v-layout {
+  color: #000000;
+}</style>
