@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getEmpById", this.$route.params.id);
-    this.$store.dispatch("getEmpChartDataById", this.$route.params.id);
+    // this.$store.dispatch("getEmpChartDataById");
   },
   // destroyed() {
   //   this.$store.state.chartData = {
@@ -36,10 +36,8 @@ export default {
   //     dates: [],
   //   };
   // },
-  methods: {
-    loadData() {
-      this.$store.dispatch("getEmpChartDataById", this.$route.params.id);
-    },
-  },
+  destroyed(){
+    this.$store.dispatch("destoryChartData");
+  }
 };
 </script>

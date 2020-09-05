@@ -1,7 +1,7 @@
 <template>
   <div id="barchart">
     <h1>Developer KLOC</h1>
-    <apexchart type="bar" height="350" :options="chartOptions" :series="series"></apexchart>
+    <apexchart type="bar" height="350" :options="chartOptions" :series="series2"></apexchart>
   </div>
 </template>
 
@@ -15,12 +15,7 @@ export default {
   },
   data: function () {
     return {
-      series: [
-        {
-          name: "KLOC",
-          data: this.$store.state.chartData.kloc,
-        },
-      ],
+      
       chartOptions: {
         chart: {
           height: 350,
@@ -102,7 +97,19 @@ export default {
         },
       },
     };
-  }
+  },
+  computed: {
+    series2: {
+      get() {
+        return ( [
+        {
+          name: "KLOC",
+          data: this.$store.state.chartData.kloc,
+        },
+      ])
+      },
+    },
+  },
 };
 </script>
 

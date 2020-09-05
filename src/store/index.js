@@ -51,16 +51,20 @@ export default new Vuex.Store({
         console.log(error);
       });
     },
+    destoryChartData(context){
+      context.commit('resetChartData');
+    },
     getEmpById(context, id) {
       EmployeeService.getEmployeeById(id).then((response) => {
-        context.commit('setSelectedEmployee', response.data);
+        context.commit('setSelectedEmployeeData', response.data);
+        // context.commit('setEmpChartData', response.data);
       }).catch((error) => {
         console.log(error);
       });
     },
-    getEmpChartDataById(context) {
-        context.commit('setEmpChartData');
-    },
+    // getEmpChartDataById(context) {
+    //     context.commit('setEmpChartData');
+    // },
     getTeamDetails(context) {
       TeamDetailService.getTeamDetails().then((response) => {
         context.commit('setTeamDetails', response.data);
@@ -83,17 +87,35 @@ export default new Vuex.Store({
       //   state.categoryNames.push(element.Name);
       // });
     },
-    setSelectedEmployee(state, data) {
+    resetChartData(state){
+      state.chartData = {
+        testCoverage: [],
+        codeSmellPercent: [],
+        codeQualityPercent: [],
+        throughput: [],
+        kloc: [],
+        dates: [],
+      }
+    },
+    setSelectedEmployeeData(state, data) {
       state.NewEmployeeObj = data;
+      data.developerKpiDto.forEach(function (key) {
+        state.chartData.testCoverage.push(key.testCoverage);
+        state.chartData.codeSmellPercent.push(key.codeSmellPercent);
+        state.chartData.codeQualityPercent.push(key.codeQualityPercent);
+        state.chartData.throughput.push(key.throughput);
+        state.chartData.kloc.push(key.kloc);
+        state.chartData.dates.push(key.date.substring(0, 10));
+      })
       console.log("Store new empoyee object", state.NewEmployeeObj);
     },
     setTeamDetails(state, data) {
       state.TeamsList = data;
       console.log("Store Team list", state.TeamsList);
     },
-    setEmpChartData(state) {
-      
-      state.NewEmployeeObj.developerKpiDto.forEach(function (key) {
+    setEmpChartData(state, data) {
+      // console.log(data);
+      data.developerKpiDto.forEach(function (key) {
         state.chartData.testCoverage.push(key.testCoverage);
         state.chartData.codeSmellPercent.push(key.codeSmellPercent);
         state.chartData.codeQualityPercent.push(key.codeQualityPercent);

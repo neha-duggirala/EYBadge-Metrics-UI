@@ -12,10 +12,10 @@
             <v-img
               :src="src"
               class="black--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="300"
               width="400"
-            ></v-img>
-            <v-card-text v-text="card.teamName"></v-card-text>
+            ><v-card-title>{{card.teamName}}</v-card-title></v-img>
+            <!-- <v-card-text v-text="card.teamName"></v-card-text> -->
             <v-spacer></v-spacer>
             <v-card-actions>
               <v-btn icon to="/" >
@@ -43,7 +43,7 @@ export default {
   },
   data() {
     return {
-      src: "http://localhost:8080/team_icon.png",
+      src: "http://localhost:8080/team.png",
       flex: 4,
     };
   }
@@ -51,4 +51,7 @@ export default {
 </script>
 
 <style>
+.v-card__title {
+  color: #FFFF00;
+}
 </style>
