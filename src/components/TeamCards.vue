@@ -15,17 +15,16 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               width="400"
             ></v-img>
-            <v-card-text v-text="card.teamName"></v-card-text>
-            <v-spacer></v-spacer>
-            <v-card-actions>
-              <v-btn icon to="/" >
+            <v-list-item-title class="headline mb-1">{{card.teamName}}</v-list-item-title>
+            <!-- <v-list-item-subtitle>Size is {{card.teamSize}}</v-list-item-subtitle> -->
+
+            <v-card-actions class="justify-center">
+              <v-btn icon to="/">
                 <v-icon>mdi-home</v-icon>
               </v-btn>
-              <v-btn icon to="/Manager" >
+              <v-btn icon to="/Manager">
                 <v-icon>mdi-chart-areaspline</v-icon>
-              </v-btn>  
-
-              
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -46,7 +45,7 @@ export default {
       src: "http://localhost:8080/team_icon.png",
       flex: 4,
     };
-  }
+  },
 };
 </script>
 

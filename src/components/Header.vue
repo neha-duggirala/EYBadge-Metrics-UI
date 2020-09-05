@@ -1,9 +1,13 @@
 <template>
-  <v-app-bar class="ats-header" fixed color="#40514E">
-    <v-btn to="/">
-          <v-icon>mdi-home</v-icon>
-        </v-btn>
-    <v-toolbar-title class="header-title">EY Badge Metrics</v-toolbar-title>
+  <v-app-bar class="ats-header" fixed color="#323232">
+    <v-img
+      class="header-logo"
+      src="http://localhost:8080/ey-logo.jpg"
+      max-height="70"
+      max-width="50"
+      
+    ></v-img>
+    <v-toolbar-title class="header-title" >EY Badge Metrics</v-toolbar-title>
   </v-app-bar>
 </template>
 

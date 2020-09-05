@@ -15,11 +15,9 @@
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               width="400"
             ></v-img>
-            <v-card-text v-text="card.employeeName"></v-card-text>
-            <v-card-text v-text="card.TeamName"></v-card-text>
-            <v-spacer></v-spacer>
-            <v-card-actions>
-              <v-btn icon :to="{ name: 'Employee', params: {'id':card.employeeId}}" >
+            <v-list-item-title class="headline mb-1">{{card.employeeName}}</v-list-item-title>
+            <v-card-actions class="justify-center">
+              <v-btn icon :to="{ name: 'Employee', params: {'id':card.employeeId}}">
                 <v-icon>mdi-calculator</v-icon>
               </v-btn>
 
@@ -50,7 +48,7 @@ export default {
       src: "http://localhost:8080/office_icon.jpg",
       flex: 4,
     };
-  }
+  },
 };
 </script>
 
