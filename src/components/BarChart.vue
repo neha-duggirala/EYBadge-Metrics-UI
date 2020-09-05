@@ -24,8 +24,8 @@ export default {
         annotations: {
           xaxis: [
             {
-              x: "2020-04-20",
-              x2: "2019-12-10",
+              x: "2019-10-14",
+              x2: "2020-01-01",
               fillColor: "#FFFF15",
               label: {
                 orientation: 'horizontal',

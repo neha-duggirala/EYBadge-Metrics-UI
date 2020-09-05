@@ -69,6 +69,9 @@ export default {
     chartOptions: {
       get() {
         return {
+          stroke: {
+            width: "2"
+      },
           chart: {
             id: "basic-bar",
           },
@@ -103,8 +106,8 @@ export default {
         annotations: {
           xaxis: [
             {
-              x: "2020-04-20",
-              x2: "2019-12-10",
+              x: "2019-10-14",
+              x2: "2020-01-01",
               fillColor: "#B3F7CA",
               label: {
                 orientation: "horizontal",
