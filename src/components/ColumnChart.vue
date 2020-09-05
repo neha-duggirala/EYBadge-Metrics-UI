@@ -119,12 +119,12 @@ export default {
         {
           name: "Commited",
           type: "column",
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+          data: [65, 63, 64, 65, 64, 65, 63, 62, 61],
         },
         {
           name: "Completed",
           type: "column",
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+          data: [63, 64, 63, 67, 65, 65, 63, 64, 64],
         },
         // {
         //   name: "Hey",
@@ -195,6 +195,53 @@ export default {
         },
       },
       chartOptions1: {
+        annotations: {
+          
+          points: [
+            {
+              x: "Q2.6",
+              y: 60,
+              image: {
+                path: "http://localhost:8080/badge.ico",
+                height: "30",
+                width: "30",
+                tooltip: {
+                  y: {
+                    formatter: () => "Badge By developr 4",
+                  },
+                },
+              },
+            },
+            {
+              x: "Q3.2",
+              y: 60,
+              image: {
+                path: "http://localhost:8080/badge.ico",
+                height: "30",
+                width: "30",
+                tooltip: {
+                  y: {
+                    formatter: () => "Badge By developr 4",
+                  },
+                },
+              },
+            },
+            {
+              x: "Q2.7",
+              y: 60,
+              image: {
+                path: "http://localhost:8080/badge.ico",
+                height: "30",
+                width: "30",
+                tooltip: {
+                  y: {
+                    formatter: () => "Badge By developr 4",
+                  },
+                },
+              },
+            },
+          ],
+        },
         title: {
           text: "Velocity Chart",
         },
