@@ -12,7 +12,6 @@
             <v-img
               :src="src"
               class="black--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               width="400"
             ></v-img>
             <v-card-actions class="justify-center">

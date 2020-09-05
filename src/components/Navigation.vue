@@ -10,7 +10,7 @@
   >
     <v-list>
       <v-list-item>
-        <v-btn to="/" icon depressed large>
+        <v-btn to="/Employee/1" icon depressed large>
           <v-icon color="#323232">mdi-account</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(0)">Home Dash Board</v-list-item-title>
@@ -28,7 +28,7 @@
         <v-list-item-title class="pl-2" @click="navigateTo(2)">Teams</v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-btn to="/Employee/1" icon depressed large>
+        <v-btn to="/Manager" icon depressed large>
           <v-icon color="#323232">mdi-chart-areaspline</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(3)">Project Manager</v-list-item-title>
@@ -57,10 +57,10 @@ export default {
       this.$store.dispatch("navExtendCollapse");
     },
     navigateTo(value) {
-      if (value == 0) this.$router.push("/");
+      if (value == 0) this.$router.push("/Employee/1");
       else if (value == 1) this.$router.push("/EmployeeCards");
       else if (value == 2) this.$router.push("TeamCards");
-      else if (value == 3) this.$router.push("/Employee/1");
+      else if (value == 3) this.$router.push("/Manager");
     }
   }
 };

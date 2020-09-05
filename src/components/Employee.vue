@@ -2,14 +2,7 @@
   <div>
     <Chart />
     <BarChart />
-    <v-btn
-      class="ats-add-category-btn mr-5"
-      color="#f5f5f5"
-      tile
-      label="cancel"
-      value="cancel"
-      @click="loadData()"
-    >Load Data</v-btn>
+    
   </div>
 </template>
 
