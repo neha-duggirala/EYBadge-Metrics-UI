@@ -19,7 +19,7 @@
             <!-- <v-list-item-subtitle>Size is {{card.teamSize}}</v-list-item-subtitle> -->
 
             <v-card-actions class="justify-center">
-              <v-btn icon to="/">
+              <v-btn icon to="/Employee/1">
                 <v-icon>mdi-home</v-icon>
               </v-btn>
               <v-btn icon to="/Manager">

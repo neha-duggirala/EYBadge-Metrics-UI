@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Developer KPI Metrics</h1>
+    <h1>Associate Software Engineer's KPI Metrics</h1>
     <apexcharts width="1000" height="550" :options="chartOptions" :series="series2"></apexcharts>
     <h1>Innovation Timeline</h1>
     <vue-horizontal-timeline min-width="200px" timeline-background="#FFFFFF" :items="items" />
@@ -103,7 +103,7 @@ export default {
               fillColor: "#B3F7CA",
               label: {
                 orientation: "horizontal",
-                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+                text: ".Net Web API Core Badge earned(Gold), Grade:'A'",
               },
             },
           ],
