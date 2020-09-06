@@ -64,7 +64,7 @@ export default {
         { text: "Grade Obtained", value: "grade" },
         { text: "Number of External Courses taken", value: "externalCourse" },
         {
-          text: "Breakout sessions given, Knowledge transfer and mentoring",
+          text: "Facilitate Workshop",
           value: "breakoutSessions",
         },
         { text: "Retook the Badge", value: "retook" },

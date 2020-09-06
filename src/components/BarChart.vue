@@ -29,7 +29,7 @@ export default {
               fillColor: "#FFFF15",
               label: {
                 orientation: 'horizontal',
-                text: "Entity Framework Core Badge earned(Gold), Grade:'A'",
+                text: " .Net Web API Core Badge earned(Gold), Grade:'A'",
               },
             },
           ],
