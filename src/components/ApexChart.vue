@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Associate Software Engineer's KPI Metrics</h1>
+    <h1>My KPI Metrics</h1>
     <apexcharts width="1000" height="550" :options="chartOptions" :series="series2"></apexcharts>
-    <h1>Innovation Timeline</h1>
-    <vue-horizontal-timeline min-width="200px" line-color="#FFFF00" timeline-background="#323232" :items="items" />
+    <h1>WorkFlow Log Graph For Today</h1>
+    <vue-horizontal-timeline min-width="200px" line-color="#FFFFFF" timeline-background="#323754" :items="items" />
   </div>
 </template>
 
@@ -19,48 +19,45 @@ export default {
     return {
       items: [
         {
-          title: "January",
+          title: "10:00 AM",
           content:
-            "Idea to Enhance the company: Follow a performance management tool",
+            "Started understanding Task 1",
         },
         {
-          title: "Febuary",
+          title: "11:00 AM",
+          content: "Task 1 docs and report preparation done "
         },
         {
-          title: "March",
+          title: "12:00 PM",
+          content: "Got an Adhoc bug from Team 2",
+        },
+        {
+          title: "1:00 PM",
           content: "",
         },
         {
-          title: "April",
+          title: "2:00 PM",
+          content: "Fixed the Adhoc bug",
+        },
+        {
+          title: "3:00 PM",
           content: "",
         },
         {
-          title: "May",
+          title: "4:00 PM",
+          content: "Feature enhancement discussion with Team 2",
+        },
+        {
+          title: "5:00 PM",
           content: "",
         },
         {
-          title: "June",
+          title: "6:00 PM",
           content: "",
         },
         {
-          title: "July",
-          content: "",
-        },
-        {
-          title: "August",
-          content: "Idea to enhance the project: Use tool like Resharper",
-        },
-        {
-          title: "September",
-          content: "",
-        },
-        {
-          title: "November",
-          content: "",
-        },
-        {
-          title: "December",
-          content: "",
+          title: "7:00 PM",
+          content: "Tasks creation for the feature",
         },
       ],
     };
