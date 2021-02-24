@@ -11,33 +11,33 @@
     <v-list>
       <v-list-item>
         <v-btn to="/Employee/1" icon depressed large>
-          <v-icon color="#323232">mdi-account</v-icon>
+          <v-icon color="#323754">mdi-account</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(0)">Self Graphs</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/EmployeeCards" icon depressed large>
-          <v-icon color="#323232">mdi-account-multiple</v-icon>
+          <v-icon color="#323754">mdi-account-multiple</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(1)">Team Mates Metrics</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/TeamCards" icon depressed large>
-          <v-icon color="#323232">mdi-account-network</v-icon>
+          <v-icon color="#323754">mdi-account-network</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(2)">Peer Teams</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/Manager" icon depressed large>
-          <v-icon color="#323232">mdi-chart-areaspline</v-icon>
+          <v-icon color="#323754">mdi-chart-areaspline</v-icon>
         </v-btn>
         <v-list-item-title class="pl-2" @click="navigateTo(3)">Business Intelligence </v-list-item-title>
       </v-list-item>
     </v-list>
     <div class="nav-arrow" :class="{'nav-arrow-expanded': !($store.state.mini)}">
       <v-btn icon depressed large @click="navExtendCollapse()">
-        <v-icon color="#323232" v-if="$store.state.mini">mdi-chevron-double-right</v-icon>
-        <v-icon color="#323232" v-else>mdi-chevron-double-left</v-icon>
+        <v-icon color="#323754" v-if="$store.state.mini">mdi-chevron-double-right</v-icon>
+        <v-icon color="#323754" v-else>mdi-chevron-double-left</v-icon>
       </v-btn>
     </div>
   </v-navigation-drawer>

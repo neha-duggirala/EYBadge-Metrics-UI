@@ -1,13 +1,13 @@
 <template>
-  <v-app-bar class="ats-header" fixed color="#323232">
+  <v-app-bar class="ats-header" fixed color="#323754">
     <v-img
       class="header-logo"
       src="http://localhost:8080/ey-logo.jpg"
-      max-height="90"
-      max-width="90"
+      max-height="40"
+      max-width="45"
       to="/"
     ></v-img>
-    <v-toolbar-title class="header-title" >Badge Metrics</v-toolbar-title>
+    <v-toolbar-title class="header-title" >HackerEarth</v-toolbar-title>
   </v-app-bar>
 </template>
 
