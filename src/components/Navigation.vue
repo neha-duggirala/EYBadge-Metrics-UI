@@ -13,13 +13,13 @@
         <v-btn to="/Employee/1" icon depressed large>
           <v-icon color="#323232">mdi-account</v-icon>
         </v-btn>
-        <v-list-item-title class="pl-2" @click="navigateTo(0)">Developer</v-list-item-title>
+        <v-list-item-title class="pl-2" @click="navigateTo(0)">Self Graphs</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/EmployeeCards" icon depressed large>
           <v-icon color="#323232">mdi-account-multiple</v-icon>
         </v-btn>
-        <v-list-item-title class="pl-2" @click="navigateTo(1)">Team Members</v-list-item-title>
+        <v-list-item-title class="pl-2" @click="navigateTo(1)">Team Mates Metrics</v-list-item-title>
       </v-list-item>
       <v-list-item>
         <v-btn to="/TeamCards" icon depressed large>
@@ -31,7 +31,7 @@
         <v-btn to="/Manager" icon depressed large>
           <v-icon color="#323232">mdi-chart-areaspline</v-icon>
         </v-btn>
-        <v-list-item-title class="pl-2" @click="navigateTo(3)">Project Manager</v-list-item-title>
+        <v-list-item-title class="pl-2" @click="navigateTo(3)">Business Intelligence </v-list-item-title>
       </v-list-item>
     </v-list>
     <div class="nav-arrow" :class="{'nav-arrow-expanded': !($store.state.mini)}">
