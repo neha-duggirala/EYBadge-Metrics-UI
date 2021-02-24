@@ -24,7 +24,7 @@
         </td>
       </tr>
     </table>
-    <v-card-title>
+    <!-- <v-card-title>
       <v-container class="ml-0 mr-0 pt-0" fluid>
         <h3 row>Team Badge Details</h3>
         <v-layout row>
@@ -38,7 +38,7 @@
           </v-layout>
       </v-container>
     </v-card-title>
-    <v-data-table :items="BadgeData" :headers="Headers" :search="search"></v-data-table>
+    <v-data-table :items="BadgeData" :headers="Headers" :search="search"></v-data-table> -->
   </div>
 </template>
 
