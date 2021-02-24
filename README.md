@@ -1,5 +1,15 @@
-# metrics-ui
+# Metrics-ui
+# UI Screenshots 
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(230).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(231).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(232).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(233).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(234).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(235).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(236).png" />
+<img src="https://github.com/neha-duggirala/EYBadge-Metrics-UI/blob/master/Screenshots/Screenshot%20(237).png" />
 
+# Steps to Run UI
 ## Project setup
 ```
 npm install

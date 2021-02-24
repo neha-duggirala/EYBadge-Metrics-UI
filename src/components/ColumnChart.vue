@@ -159,13 +159,16 @@ export default {
           curve: "stepline",
           colors: "#000000",
         },
-        dataLabels: {
-          enabled: false,
-        },
+        
         title: {
           text: "Q3.3 Burndown Chart - Story Points",
           align: "left",
         },
+        tooltip: {
+                  y: {
+                    formatter: (val) => "Story points remaining " + val,
+                  },
+                },
         markers: {
           colors: "#FFFF00",
           hover: {
@@ -202,15 +205,13 @@ export default {
         title: {
           text: "Story points covered in Q3.3",
         },
-        dataLabels: {
-          formatter(val, opts) {
-            const name = opts.w.globals.labels[opts.seriesIndex];
-            return [name, val.toFixed(1) + "%"];
-          },
-        },
-        legend: {
-          show: false,
-        },
+        // dataLabels: {
+        //   formatter(val, opts) {
+        //     const name = opts.w.globals.labels[opts.seriesIndex];
+        //     return [name, val.toFixed(1) + "%"];
+        //   },
+        // },
+        
       },
       chartOptions1: {
         annotations: {

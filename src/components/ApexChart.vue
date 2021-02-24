@@ -3,7 +3,7 @@
     <h1>Associate Software Engineer's KPI Metrics</h1>
     <apexcharts width="1000" height="550" :options="chartOptions" :series="series2"></apexcharts>
     <h1>Innovation Timeline</h1>
-    <vue-horizontal-timeline min-width="200px" timeline-background="#323232" :items="items" />
+    <vue-horizontal-timeline min-width="200px" line-color="#FFFF00" timeline-background="#323232" :items="items" />
   </div>
 </template>
 
