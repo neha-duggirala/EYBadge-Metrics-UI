@@ -7,7 +7,7 @@
       max-width="45"
       to="/"
     ></v-img>
-    <v-toolbar-title class="header-title" >HackerEarth</v-toolbar-title>
+    <v-toolbar-title class="header-title" >HackerEarth Workflow Analysis</v-toolbar-title>
   </v-app-bar>
 </template>
 

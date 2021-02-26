@@ -52,80 +52,9 @@ export default {
   },
   data: function () {
     return {
-      search: "",
-      // Headers: ["Employee Id", "Badge Domain", "Badge Sub-Domain", "Badge Type", "Completed On"],
-      Headers: [
-        { text: "Employee Id", value: "employeeId" },
-        { text: "Badge ID", value: "badgeId" },
-
-        { text: "Badge Domain", value: "Domain" },
-        { text: "Badge Sub-Domain", value: "SubDomain" },
-        { text: "Badge Type", value: "Type" },
-        { text: "Grade Obtained", value: "grade" },
-        { text: "Number of External Courses taken", value: "externalCourse" },
-        {
-          text: "Facilitate Workshop",
-          value: "breakoutSessions",
-        },
-        { text: "Retook the Badge", value: "retook" },
-        { text: "Comments", value: "externalCourseComments" },
-
-        { text: "Started On", value: "startTime", sortable: false },
-        { text: "Completed On", value: "endTime", sortable: false },
-      ],
-      BadgeData: [
-        {
-          date: "2020-08-23T23:42:15.61",
-          employeeId: 1,
-          badgeId: 101,
-          Domain: "EY Technology",
-          SubDomain: ".Net Web API",
-          Type: "Bronze",
-          grade: 90,
-          retook: false,
-          startTime: "2019-12-20T00:00:00",
-          endTime: "2020-03-20T00:00:00",
-          breakoutSessions: 2,
-          externalCourse: 1,
-          externalCourseComments:
-            "Took the course from Coursera and built a sample POC",
-          badge: null,
-        },
-        {
-          date: "2020-08-23T23:44:32.347",
-          employeeId: 2,
-          badgeId: 121,
-          Domain: "EY CyberSecurity",
-          SubDomain: "Vulnerability testing",
-          Type: "Bronze",
-          grade: 65,
-          retook: false,
-          startTime: "2019-05-20T00:00:00",
-          endTime: "2019-09-20T00:00:00",
-          breakoutSessions: 1,
-          externalCourse: 0,
-          externalCourseComments: "No course taken",
-          badge: null,
-        },
-        {
-          date: "2020-08-24T00:00:04.65",
-          employeeId: 1,
-          badgeId: 121,
-          Domain: "EY CyberSecurity",
-          SubDomain: "CyberSecurity",
-          Type: "Gold",
-          grade: 68,
-          retook: false,
-          startTime: "2020-02-20T00:00:00",
-          endTime: "2020-04-20T00:00:00",
-          breakoutSessions: 0,
-          externalCourse: 0,
-          externalCourseComments: null,
-          badge: null,
-        },
-      ],
+     
       myStyle: {
-        backgroundColor: "#000000",
+        backgroundColor: "#323754",
       },
       series3: [
         {
@@ -157,7 +86,7 @@ export default {
         },
         stroke: {
           curve: "stepline",
-          colors: "#000000",
+          colors: "#323754",
         },
         
         title: {
@@ -170,7 +99,7 @@ export default {
                   },
                 },
         markers: {
-          colors: "#FFFF00",
+          colors: "#808080",
           hover: {
             sizeOffset: 4,
           },
@@ -187,11 +116,11 @@ export default {
           "Developer 3",
           "Developer 4",
           "Developer 5",
-          "Ankitha - QA",
+          "QA",
         ],
         theme: {
           monochrome: {
-            color: "#000000",
+            color: "#323754",
             enabled: true,
           },
         },
@@ -270,7 +199,7 @@ export default {
         legend: {
           show: true,
           markers: {
-            fillColors: ["#323232", "#FFFF4d"],
+            fillColors: ["#323754", "#808080"],
           },
         },
         plotOptions: {
@@ -308,7 +237,7 @@ export default {
         },
         fill: {
           opacity: 1,
-          colors: ["#323232", "#FFFF4d"],
+          colors: ["#323754", "#808080"],
         },
         tooltip: {
           y: {
@@ -325,5 +254,5 @@ export default {
 
 <style>
 .v-layout {
-  color: #000000;
+  color: #323754;
 }</style>

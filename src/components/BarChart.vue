@@ -26,7 +26,7 @@ export default {
             {
               x: "2019-10-14",
               x2: "2020-01-01",
-              fillColor: "#FFFF15",
+              fillColor: "#323754",
               label: {
                 orientation: 'horizontal',
                 text: " .Net Web API Core Badge earned(Gold), Grade:'A'",
@@ -46,7 +46,7 @@ export default {
           offsetY: -20,
           style: {
             fontSize: "12px",
-            colors: ["#304758"],
+            colors: ["#323754"],
           },
         },
 
@@ -63,8 +63,8 @@ export default {
             fill: {
               type: "gradient",
               gradient: {
-                colorFrom: "#D8E3F0",
-                colorTo: "#BED1E6",
+                colorFrom: "#323754",
+                colorTo: "#323754",
                 stops: [0, 100],
                 opacityFrom: 0.4,
                 opacityTo: 0.5,
@@ -92,7 +92,7 @@ export default {
           offsetY: 330,
           align: "center",
           style: {
-            color: "#444",
+            color: "#323754",
           },
         },
       },

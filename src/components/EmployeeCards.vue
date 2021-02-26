@@ -8,7 +8,7 @@
           :cols="flex"
           class="d-flex"
         >
-          <v-card class="d-flex flex-column" height="400" width="375">
+          <v-card class="d-flex flex-column" height="500" width="375">
             <v-img
               :src="src"
               class="black--text align-end"

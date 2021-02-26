@@ -1,6 +1,6 @@
 <template>
   <v-footer fixed height="15px" color="#f5f5f5">
-    <v-spacer></v-spacer>© EY Badges 2020
+    <v-spacer></v-spacer>© HACKEREARTH 2021
   </v-footer>
 </template>
 <script>
